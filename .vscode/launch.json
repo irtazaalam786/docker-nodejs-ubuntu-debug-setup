@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Docker: Attach to Node",
+      "address": "0.0.0.0", // Allow connections from any IP
+      "port": 9922,
+      "localRoot": "${workspaceFolder}",
+      "remoteRoot": "/app", // Adjust based on your container's file structure
+      "protocol": "inspector",
+      "restart": true
+    }
+  ]
+}

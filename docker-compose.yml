@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+    container_name: nodejs-express-app
+    volumes:
+      - .:/app
+    command: sh -c "npm install && npm start --inspect=0.0.0.0:9229"
+    ports:
+      - "3001:3000"
+      - "9922:9229"
